@@ -59,7 +59,7 @@ class _FilePreviewPageState extends State<FilePreviewPage> {
 在iOS中的调试的时候，在`info.plist`文件中新增
 ```
 io.flutter.embedded_views_preview bool YES
-App Transport Security Settings Dictionary
+App Transport Security Settings
 ```
 
 在`App Transport Security Settings Dictionary`添加子项
