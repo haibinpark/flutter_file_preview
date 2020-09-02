@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_file_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <me.haibin.file_preview.FileView-->
+    <!--        android:id="@+id/mSuperFileView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--    </me.haibin.file_preview.FileView>-->
+    <RelativeLayout
+        android:id="@+id/rl_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+</RelativeLayout>

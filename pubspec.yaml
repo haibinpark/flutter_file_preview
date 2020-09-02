@@ -1,9 +1,8 @@
 name: flutter_file_preview
-description: A new flutter plugin project.
-version: 0.0.1
-author:
-homepage:
-
+description: flutter 文件浏览(`flutter file preview`)
+version: 1.0.0
+author: 13688065326@qq.com
+homepage: https://github.com/haibinpark/flutter_file_preview.git
 environment:
   sdk: ">=2.7.0 <3.0.0"
   flutter: ">=1.10.0"

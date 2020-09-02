@@ -10,6 +10,6 @@
 
 @implementation FlutterFilePreviewPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftFlutterFilePreviewPlugin registerWithRegistrar:registrar];
+    [FlutterFilePreviewPlugin registerWithRegistrar:registrar];
 }
 @end
