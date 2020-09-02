@@ -28,7 +28,7 @@ class FilePreviewView: NSObject,FlutterPlatformView,DownloadDelegate {
                     if(path.starts(with: "http")){
                         self.downloader?.downLoader(url: NSURL(string: path)!)
                         path = self.downloader?.downLoadFilePath() as! String
-//                        self.openFile(filePath: path)
+                        self.openFile(filePath: path)
                     }else{
                         self.openFile(filePath: path)
                     }

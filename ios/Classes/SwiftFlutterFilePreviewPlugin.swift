@@ -27,13 +27,13 @@ public func fileType(filePath:String?) -> String {
 
 let channelName = "me.haibin.file_preview"
 
-public class SwiftFilePreviewPlugin: NSObject, FlutterPlugin {
-    public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: channelName, binaryMessenger: registrar.messenger())
-        let instance = SwiftFilePreviewPlugin()
-        registrar.addMethodCallDelegate(instance, channel: channel)
-        registrar.register(FilePreviewFactory.init(messenger: registrar.messenger()), withId: "FilePreview")
-    }
+public class SwiftFlutterFilePreviewPlugin: NSObject, FlutterPlugin {
+  public static func register(with registrar: FlutterPluginRegistrar) {
+      let channel = FlutterMethodChannel(name: channelName, binaryMessenger: registrar.messenger())
+      let instance = SwiftFlutterFilePreviewPlugin()
+      registrar.addMethodCallDelegate(instance, channel: channel)
+      registrar.register(FilePreviewFactory.init(messenger: registrar.messenger()), withId: "FilePreview")
+  }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "getPlatformVersion"{
