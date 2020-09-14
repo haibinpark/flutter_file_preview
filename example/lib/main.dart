@@ -82,15 +82,26 @@ class _HomePageState extends State<HomePage> {
   };
 
   Map<String, String> androidfiles = {
-    "docx": "assets/files/docx.docx", // android test
-    "doc": "assets/files/doc.doc", // android test
-    "xlsx": "assets/files/xlsx.xlsx", // android test
-    "xls": "assets/files/xls.xls", // android test
-    "pptx": "assets/files/pptx.pptx", // android test
-    "ppt": "assets/files/ppt.ppt", // android test
-    "pdf": "assets/files/pdf.pdf", // android test
+    "docx": "assets/files/docx.docx",
+    // android test
+    "doc": "assets/files/doc.doc",
+    // android test
+    "xlsx": "assets/files/xlsx.xlsx",
+    // android test
+    "xls": "assets/files/xls.xls",
+    // android test
+    "pptx": "assets/files/pptx.pptx",
+    // android test
+    "ppt": "assets/files/ppt.ppt",
+    // android test
+    "pdf": "assets/files/pdf.pdf",
+    // android test
     "txt": "assets/files/txt.txt",
-    "在线DOC": "http://res.imtt.qq.com/TES/HowToLoadX5Core.doc" // android test
+    "在线DOC": "http://res.imtt.qq.com/TES/HowToLoadX5Core.doc",
+    // android test
+    "在线DOC1":
+        "http://pasture.sctuopuyi.com/agreement/1599740471384c55808447e304e949731ffb51ec373fc.doc"
+    // android test
   };
 
   Map<String, String> files;

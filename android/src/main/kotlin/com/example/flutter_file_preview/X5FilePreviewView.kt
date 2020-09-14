@@ -177,7 +177,7 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
             }
 
             override fun onFailure(call: Call<ResponseBody?>, t: Throwable) {
-                LogUtil.d(TAG, "文件下载失败")
+                LogUtil.d(TAG, "文件下载失败${t.message}")
                 val file = getCacheFile(url)
                 if (!file.exists()) {
                     LogUtil.d(TAG, "删除下载失败文件")
