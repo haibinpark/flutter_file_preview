@@ -33,9 +33,9 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
             "openFile" -> {
                 val filePath = (methodCall.arguments as Map<String?, String?>)["file"]
                 if (isSupportFile(filePath) == true) {
-                    if (filePath?.startsWith("http") == true){
+                    if (filePath?.startsWith("http") == true) {
                         downLoadFromNet(filePath)
-                    }else{
+                    } else {
                         openFile(filePath)
                     }
                     result.success(true)
@@ -111,7 +111,6 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
         readerView = TbsReaderView(context, this)
         readerView?.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
     }
-
 
 
     private fun downLoadFromNet(url: String?) {
@@ -213,8 +212,8 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
             localBundle.putBoolean("menu_show", false)
             localBundle.putBoolean("is_bar_animating", false)
             localBundle.putString("tempPath", tempPath)
-            if (readerView == null){
-                readerView = TbsReaderView(context,TbsReaderView.ReaderCallback { p0, p1, p2 -> })
+            if (readerView == null) {
+                readerView = TbsReaderView(context, TbsReaderView.ReaderCallback { p0, p1, p2 -> })
             }
             val preOpen = readerView?.preOpen(getFileType(mFile.toString()), false)
             if (preOpen == true) {
@@ -233,7 +232,7 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
      * @return
      */
     private fun getCacheDir(url: String?): File {
-        return File(Environment.getExternalStorageDirectory().absolutePath + "/007/")
+        return File(context.filesDir.absolutePath + "/filepreview/")
     }
 
     /***
@@ -243,7 +242,7 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
      * @return
      */
     private fun getCacheFile(url: String?): File {
-        val cacheFile = File(Environment.getExternalStorageDirectory().absolutePath + "/007/"
+        val cacheFile = File(context.filesDir.absolutePath + "/filepreview/"
                 + getFileName(url))
         LogUtil.d(TAG, "缓存文件 = $cacheFile")
         return cacheFile
@@ -258,7 +257,6 @@ class X5FilePreviewView internal constructor(val context: Context, messenger: Bi
     private fun getFileName(url: String?): String {
         return Md5Tool.hashKey(url).toString() + "." + getFileType(url)
     }
-
 
 
 }
